@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Movies DB</title>
+  <link rel="stylesheet" href="./styles/app.css">
+</head>
+<body>
+  <header class="header">
+    <span class="header-arrow inactive">&lt;</span>
+    <h1 class="header-title">MY MOVIES DB</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#trends">Tendencias</a></li>
+        <li><a href="#category=">Categorías</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input class="searchInput" type="search" placeholder="Buscar" aria-label="Buscar"/>
+      <button class="searchBtn" aria-label="Buscar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-4.35-4.35m1.15-5.4a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <h1 class="header-title header-title--categoryView inactive"></h1>
+    
+    <section class="movies-section tendencias">
+      <div class="section-header">
+        <h2>Tendencias</h2>
+        <button class="trendingPreview-btn">Ver más</button>
+      </div>
+      <article class="movies-grid trendingPreview-movieList">
+         <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
+      </article>
+    </section>
+
+    <section class="movies-section categorias">
+      <div class="section-header">
+        <h2>Categorías</h2>
+      </div>
+      <div class="movies-grid categories-container">
+        <div class="category-container category-container--loading"></div>
+        <div class="category-container category-container--loading"></div>
+        <div class="category-container category-container--loading"></div>
+      </div>
+    </section>
+
+    <section id="liked" class="movies-section liked-container">
+  <div class="section-header">
+    <h2>Películas favoritas</h2>
+  </div>
+
+  <article class="movies-grid trendingPreview-movieList liked-movieList">
+    <!-- películas favoritas -->
+  </article>
+</section>
+
+    <section id="genericList" class="genericList-container inactive">
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
+      <div class="movie-container movie-container--loading"></div>
+    </section>
+  
+
+    <section id="movieDetail" class="movieDetail-container inactive">
+      <div class="movie-detail-img">
+      </div>
+      <h1 class="movieDetail-title"></h1>
+      <span class="movieDetail-score"></span>
+      <p class="movieDetail-description">
+      </p>
+
+      <article class="relatedMovies-container">
+        <h2 class="relatedMovies-title">Películas similares</h2>
+  
+        <div class="relatedMovies-scrollContainer">
+          <div class="movie-container movie-container--loading"></div>
+          <div class="movie-container movie-container--loading"></div>
+          <div class="movie-container movie-container--loading"></div>
+        </div>
+      </article>
+    </section>
+
+  <footer>
+    <p>© 2025 My Movies DB - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./src/secrets.js"></script>
+  <script src="./src/nodes.js"></script>
+  <script src="./src/main.js" defer></script>
+  <script src="./src/navigation.js"></script>
+</body>
+</html>
